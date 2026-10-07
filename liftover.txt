@@ -1,0 +1,1 @@
+Let me know if your data is also hg19, I can share how we lifted over our data
