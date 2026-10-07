@@ -8,7 +8,6 @@ Sharing scripts for natgen revisions with Matias
 Core pipeline:
 
 1. Bulk WGS input (HMF/PURPLE pipeline)
-Clinical data at /wrk/natgen_reviews/sarcoma_vcfs/data/clinical_bulk_data_full for 9 sarcoma patients (K11788-22, K1190-22, K1554-22, K1862-22, K19085-21, K2208-22, K2765-22, K6634-23, K742-23)
 Annoying thing for us: Data was hg19/GRCh37, but the single-cell ASCENT BAMs are hg38 — requires CrossMap liftover.
 Maybe similar for you? Worth double checking before doing analyses. We used CrossMap liftover.
 Filter somatic VCF: FILTER=PASS, drop TIER=LOW_CONFIDENCE, drop indels (cellsnp-lite is SNV-only), require PURPLE_GERMLINE state in {DIPLOID, HET}, MAPPABILITY ≥0.9, depth ≥20, alt≥3
